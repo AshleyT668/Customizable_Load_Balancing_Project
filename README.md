@@ -1,12 +1,6 @@
 # Load-Balancer-Distributed-System
 ## Project Overview
-This project involves implementing a load balancer that asynchronously routes requests between servers.
-- In this repository, the tasks handled are divided into folders, corresponding to the task handled. For
-instance, `TASK_1` contains scripts for Task 1, `TASK_2` has files for Task 2, and so on.
-- The code for the servers can be found in `TASK_1/server.py`, and the final load balancer source code is located in 
-`TASK_3/app.py`
-- A detailed analysis on the load balancer's performance is outlined on this README as well as in 
-`TASK_4/analysis.ipynb`.
+This project implements a lightweight, Dockerized load balancing system using Consistent Hashing to distribute client requests across multiple asynchronous server replicas. The system demonstrates core distributed systems concepts including virtual node mapping, health monitoring, fault recovery, container orchestration, and scalable routing—all simulated using local containers.
 
 ## Table of Contents
 - [Installation and Setup](#installation-and-setup)
@@ -83,39 +77,6 @@ docker-compose down
 ```bash
 python app.py
 ```
-
-## Repository Structure
-```bash
-├── .gitignore
-├── README.md
-├── TASK_1
-│   ├── Dockerfile
-│   ├── requirements.txt
-│   └── server.py
-├── TASK_2
-│   ├── Dockerfile
-│   ├── consistent_hash.py
-│   ├── docker-compose.yml
-│   ├── loadbalancer.py
-│   └── requirements.txt
-├── TASK_3
-│   ├── Dockerfile
-│   ├── app.py
-│   ├── consistent_hash.py
-│   ├── docker-compose.yml
-│   └── requirements.txt
-├── TASK_4
-│   ├── analysis.ipynb
-│   ├── analysis_one.py
-│   ├── analysis_two.py
-│   ├── consistent_hash.py
-│   └── figures
-│       ├── analysis_one.png
-│       └── analysis_two.png
-└── requirements.txt
-
-```
-
 ## Design Choices
 To implement the load balancer, Object-Oriented programming was applied.
 - The hashing mechanism was implemented as a class called `ConsistentHashRing`, which contained attributes such as the
@@ -182,59 +143,6 @@ curl -X DELETE http://localhost:5000/rm \
 ```bash
 curl http://localhost:5000/rep
 ```
-
-### Testing with Python (using `requests`)
-#### 1. Test Load Balancer Routing
-```python
-import requests
-
-response = requests.get("http://localhost:5000/home")
-print(response.status_code, response.json())
-```
-
-#### 2. Add a New Server
-```python
-import requests
-
-data = {"n": 1, "hostnames": ["server4:5000"]}
-response = requests.post("http://localhost:5000/add", json=data)
-print(response.status_code, response.json())
-```
-
-#### 3. Remove a Server
-```python
-import requests
-
-data = {"n": 1, "hostnames": ["server4:5000"]}
-response = requests.delete("http://localhost:5000/rm", json=data)
-print(response.status_code, response.json())
-```
-
-#### 4. List Active Servers
-```python
-import requests
-
-response = requests.get("http://localhost:5000/rep")
-print(response.status_code, response.json())
-```
-- Examples of testing with Python can be found in the `analysis.ipynb` notebook provided in the TASK_4 directory.
-
-### Testing with Postman
-#### 1. Get Replicas
-![Get Replicas](postman_tests/get_replicas.png)
-
-#### 2. Add Server Instances
-![Add Server Instances](postman_tests/add_server_instances.png)
-
-#### 3. Remove Server Instances
-![Remove Server Instances](postman_tests/remove_server_instances.png)
-
-#### 4. Request to `/home`
-![Request to home endpoint](postman_tests/request_to_home.png)
-
-#### 5. Request to `/other`
-![Request to other endpoint](postman_tests/request_to_other.png)
-
 ## Load Balancer Performance Analysis
 - For more details, refer to **`TASK_4/analysis.ipynb`**.
 
