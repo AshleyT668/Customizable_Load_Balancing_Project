@@ -130,7 +130,6 @@ curl -X DELETE http://localhost:5000/rm \
 curl http://localhost:5000/rep
 ```
 ## Load Balancer Performance Analysis
-- For more details, refer to **`TASK_4/analysis.ipynb`**.
 
 ### A-1: Request Count Per Server Instance
 - This experiment involved executing 10,000 async requests on the 3 server containers, with the results being displayed
