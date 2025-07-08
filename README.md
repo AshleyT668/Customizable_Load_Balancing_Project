@@ -32,7 +32,7 @@ This project implements a lightweight, Dockerized load balancing system using Co
 ### Setup Instructions
 - Clone the repository:
 ```bash
-git clone https://github.com/Twna-Jane/Load-Balancer-Distributed-System.git 
+git clone https://github.com/AshleyT668/Customizable_Load_Balancing_Project.git 
 ```
 
 - Navigate to the repository:
