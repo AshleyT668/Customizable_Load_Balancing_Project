@@ -37,7 +37,7 @@ git clone https://github.com/AshleyT668/Customizable_Load_Balancing_Project.git
 
 - Navigate to the repository:
 ```bash
-cd Load-Balancer-Distributed-System
+cd Customizable_Load_Balancing_Project
 ```
 
 - Create a Python virtual environment:
@@ -84,18 +84,9 @@ servers, slots, and virtual nodes to be created, and methods for implementing ha
 - The servers and load balancer are implemented as Flask web servers, comprising the endpoints required for request 
 handling and load balancing operations.
 
-## Assumptions
-- The following assumptions were made in the load balancer implementation:
-1. Request IDs are generated randomly by the load balancer.
-2. The load balancer is the only point of entry to the internal network - Clients only interact directly with the load 
-balance, which handles request to, and from servers dynamically.
-3. Server failure is detected through heartbeats.
-4. Scaling is done manually via API - Servers are added and removed through the load balancer's APIs, hence no automatic 
-scaling is done.
-
 ## Testing the Project
 Postman, command-line tools like `cURL`, or Python scripts using the `requests` module can be used to perform tests
-for the server(s) and load balancer. Example of tests using Postman have been provided in this section.
+for the server(s) and load balancer. 
 
 ### Endpoints
 #### Server Endpoints
