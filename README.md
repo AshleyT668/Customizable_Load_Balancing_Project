@@ -9,7 +9,6 @@ This project implements a lightweight, Dockerized load balancing system using Co
 - [Basic Usage](#basic-usage)
   - [Running Docker Services](#running-docker-services)
   - [Running Python Files](#running-python-files)
-- [Repository Structure](#repository-structure)
 - [Testing the Project](#testing-the-project)
   - [Endpoints](#endpoints)
   - [Testing with cURL](#testing-with-curl)
