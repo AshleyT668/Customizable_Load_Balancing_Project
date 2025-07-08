@@ -164,8 +164,7 @@ to a specific server, showing a case of horizontal scaling.
 
 #### Observations
 From the experiment, it was noted that majority of the requests were routed to server 2 compared to server 3, showing a 
-significant imbalance which still existed based on the setup, despite the removal of server 1 (Refer to the notebook for 
-more information).
+significant imbalance which still existed based on the setup, despite the removal of server 1.
 
 ---
 
