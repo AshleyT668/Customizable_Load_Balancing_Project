@@ -72,13 +72,6 @@ docker-compose down
 ```bash
 python app.py
 ```
-## Design Choices
-To implement the load balancer, Object-Oriented programming was applied.
-- The hashing mechanism was implemented as a class called `ConsistentHashRing`, which contained attributes such as the
-servers, slots, and virtual nodes to be created, and methods for implementing hashing and server allocation for a request.
-- The servers and load balancer are implemented as Flask web servers, comprising the endpoints required for request 
-handling and load balancing operations.
-
 ## Testing the Project
 Postman, command-line tools like `cURL`, or Python scripts using the `requests` module can be used to perform tests
 for the server(s) and load balancer. 
