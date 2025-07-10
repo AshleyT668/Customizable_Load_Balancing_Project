@@ -142,6 +142,7 @@ across the ring.
 ### A-2: Average Load of Servers for N = 2 to 6
 - This experiment involved iteratively increasing the number of servers from 2 to 6 while launching async requests.
 - The results are plotted on a line chart.
+  
 ![Test 2](https://github.com/user-attachments/assets/544d4c5e-afbb-4ef8-aa18-c661f3adf9b1)
 
 
