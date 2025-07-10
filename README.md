@@ -128,7 +128,8 @@ curl http://localhost:5000/rep
 - This experiment involved executing 10,000 async requests on the 3 server containers, with the results being displayed
 in a bar chart.
 - Asynchronous requests are launched by using `aiohttp` + `asyncio` for concurrent request handling.
-![Request Count Per Server Instance](Test1.png)
+![Test 1](https://github.com/user-attachments/assets/fdd56e1e-f5c6-4a77-a259-7e8db3bb4f34)
+
 
 #### Observations
 From the graph, most of the requests are handled by server2, followed by server1 and lastly server3.
